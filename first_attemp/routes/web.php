@@ -26,6 +26,10 @@ Route::get('/create', [FormController::class, 'index']);
 
 Route::post('/create', [FormController::class, 'create']);
 
+Route::get('/create2', function () {
+    return view('create2');
+});
+
 // Route::get('/form', function () {
 //     $form = Form::all();
 //     echo "<pre>";
