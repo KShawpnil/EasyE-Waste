@@ -20,7 +20,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
 Route::resource('qfd',ProductController::class);
 
 Route::get('/create', [FormController::class, 'index']);
