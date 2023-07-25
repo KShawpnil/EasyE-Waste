@@ -1,0 +1,164 @@
+body{
+    background-image: url("./images/background\ 1\ updated.png") ;
+    image-resolution: calc();
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #346fa0;
+    height: 60px;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    height: 60px;
+    width: 120px;
+    font-size: larger;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  
+  li a:hover:not(.active) {
+    background-color: #22beee;
+  }
+  
+  .active {
+    background-color: rgb(8, 66, 114);
+  }
+
+
+nav{
+    display: block;
+}
+
+#logo{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    margin-top: 3%;
+    margin-left: 3%;
+    background-image: url("./images/logo_done.png");
+    background-size: cover;
+}
+
+#quoteDiv{
+    height: 150px;
+    width: 600px;
+    background-color: whitesmoke;
+    border-radius: 20px;
+    margin-top: 35%;
+    margin-left: 58%;
+    padding-top: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    text-align: center;
+    border: 1px solid black;
+    box-shadow: inset;
+}
+
+#quote{
+    font-size: 2rem;
+    font-weight: bold;
+    font-style: italic;
+}
+
+#author{
+    text-align: right;
+    font-style: italic;
+}
+
+#loginHeader{
+    margin-left: auto;
+    margin-top: 30px;
+    text-align: center;
+}
+
+#loginMainDiv{
+    background-color: seashell;
+    height: 500px;
+    width: 950px;
+    /* text-align: center; */
+    margin-top: 10%;
+    margin-left: 28%;
+    display: flex;
+    border-radius: 20px;
+}
+
+
+
+#regMainDiv{
+  background-color: seashell;
+  height: 700px;
+  width: 950px;
+  /* text-align: center; */
+  margin-top: 10%;
+  margin-left: 28%;
+  display: flex;
+  border-radius: 20px;
+}
+
+
+
+#loginImageDiv{
+    height: 500px;
+    width: 500px;
+    /* margin-top: 70px; */
+    background-image: url("./images/save-environment-5624599-4707348.webp");
+    background-size: cover;
+    border-radius: 20px;
+}
+
+#regImageDiv{
+  height: 500px;
+  width: 500px;
+  margin-top: 120px;
+  background-image: url("./images/save-environment-5624599-4707348.webp");
+  background-size: cover;
+  border-radius: 20px;
+}
+
+#loginDiv{
+    height: 500px;
+    width: 450px;
+    border-radius: 20px;
+}
+#loginTable{
+    margin-left: 100px;
+    margin-top: 100px;
+}
+.logininput{
+    height: 25px;
+    width: 265px;
+}
+.reginput{
+    height: 25px;
+    width: 265px;
+}
+
+#loginButton{
+    height: 30px;
+    width: 265px;
+    margin-top: 20px;
+}
+
+#regTable{
+    margin-left: 100px;
+    margin-top: 60px;
+}
+
+#regButton{
+    height: 30px;
+    width: 265px;
+    margin-top: 20px;
+}
