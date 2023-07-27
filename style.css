@@ -1,6 +1,7 @@
 body{
-    background-image: url("./images/background\ 1\ updated.png") ;
+    background-image: url("./images/background\ 1.png") ;
     image-resolution: calc();
+    background-size: cover;
 }
 
 ul {
@@ -96,10 +97,15 @@ nav{
 }
 
 
+#regHeader{
+    margin-left: 20%;
+    margin-top: 30px;
+    text-align: center;
+}
 
 #regMainDiv{
   background-color: seashell;
-  height: 700px;
+  height: 7+00px;
   width: 950px;
   /* text-align: center; */
   margin-top: 10%;
@@ -140,10 +146,16 @@ nav{
 .logininput{
     height: 25px;
     width: 265px;
+    /* border: none;
+    border-bottom: 1.5px solid black;
+    background-color: transparent; */
 }
 .reginput{
     height: 25px;
     width: 265px;
+    /* border: none;
+    border-bottom: 1.5px solid black;
+    background-color: transparent; */
 }
 
 #loginButton{
