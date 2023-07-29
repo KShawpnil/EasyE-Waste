@@ -12,10 +12,11 @@
                         <div class="alert alert-success" role="alert">
                             {{ session('status') }}
                         </div>
-                    @endif
-
+                        @endif
+                        
                     {{ __('You are logged in!') }}
                 </div>
+                <a href="{{url('/placeorder')}}"><button>Place Order</button></a>
             </div>
         </div>
     </div>
