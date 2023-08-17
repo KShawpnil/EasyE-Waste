@@ -36,8 +36,9 @@
                 <label for="reduce">Reduce</label>
                 <input type="radio" name="endproduct" id="reduce" value="reduce">
             </div>
+            <input type="hidden" name="user_id" value="{{Auth::user()->id}}">
             <div class="form-group">
-                <a href="{{url('/home')}}"><input type="submit" value="Go to QFD"></a> 
+                <input type="submit" value="Go to QFD">
             </div>
         </div>
     </form>

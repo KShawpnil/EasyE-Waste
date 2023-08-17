@@ -12,10 +12,15 @@ class Orders extends Model{
         'producttype',
         'productamount',
         'endproduct',
+        'qfd',
     ];
 
     protected $attributes=[
-        'user_id'=>1,
         'status'=>'pending',
     ];
+
+    public function user():BelongsTo
+    {
+        return $this->belongsto(User::class);
+    }
 }
