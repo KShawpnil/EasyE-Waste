@@ -60,7 +60,7 @@
                             <td data-th="Price">৳500</td>
                             <td data-th="Quantity">
                                 @foreach($item as $i)
-                                <input type="number" value="{{ $i->productamount }}" class="form-control quantity cart_update" min="1" />
+                                <input type="text" value="{{ $i->productamount }}" class="form-control quantity cart_update" min="1" />
                                 
                             </td>
                             <td data-th="Subtotal">৳500</td>
