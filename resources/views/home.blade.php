@@ -17,7 +17,6 @@
                     {{ __('You are logged in!') }}
                 </div>
                 <a href="{{url('/placeorder')}}"><button>Place Order</button></a>
-                <a href="{{url('/checkout')}}"><button>Payment</button></a>
             </div>
         </div>
     </div>

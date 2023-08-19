@@ -51,4 +51,9 @@ class User extends Authenticatable
     {
         return $this->hasmany(Orders::class,'user_id','id');
     }
+
+    public function qfd():HasOne
+    {
+        return $this->hasmany(QFD::class,'user_id','id');
+    }
 }

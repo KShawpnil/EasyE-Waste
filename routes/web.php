@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\StripeController;
+use App\Http\Controllers\QFDController;
+use App\Http\Controllers\QFDResultsController;
 
 
 
@@ -31,5 +33,10 @@ Route::get('/checkout', [App\Http\Controllers\StripeController::class,'details']
 Route::post('/session', [App\Http\Controllers\StripeController::class,'session'])->name('session');
 Route::get('/success', [App\Http\Controllers\StripeController::class,'success'])->name('success');
 // Route::get('/checkout',[App\Http\Controllers\StripeController::class,'session']);
-Route::get('/qfd',[OrderController::class,'qfd'])->name('qfd');
-Route::post('/qfd',[OrderController::class,'insertqfd'])->name('qfd');
+Route::get('/qfd',[QFDController::class,'index'])->name('qfd');
+Route::post('/qfd',[QFDController::class,'insertqfd']);
+
+Route::get('/qfdresults',[QFDResultsController::class,'index'])->name('qfdresults');
+Route::get('/qfdresults',[QFDResultsController::class,'fetch'])->name('qfdresults');
+
+

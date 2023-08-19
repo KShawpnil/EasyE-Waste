@@ -15,18 +15,22 @@
                 <input type="text" name="productname" id="productname">
             </div>
             <div class="form-group">
-                <p>Select Product Type</p>
+                <label for="producttype">Enter Product Type</label>
+                <input type="text" name="producttype" id="producttype">
+                <!-- <p>Enter Product Type</p>
                 <label for="plastic">Plastic</label>
                 <input type="radio" name="producttype" id="plastic" value="plastic">
                 <label for="metal">Metal</label>
                 <input type="radio" name="producttype" id="metal" value="metal">
                 <label for="glass">Glass</label>
-                <input type="radio" name="producttype" id="glass" value="glass">
+                <input type="radio" name="producttype" id="glass" value="glass"> -->
             </div>
             <div class="form-group">
                 <label for="productamount">Enter Product amount(KG)</label>
                 <input type="number" name="productamount" id="productamount" min="1" max="10">
             </div>
+                <label for="endproduct">Enter Product Outcome</label>
+                <input type="text" name="endproduct" id="endproduct">
             <!-- <div class="form-group">
                 <p>Select Outcome</p>
                 <label for="recylce">Recylce</label>

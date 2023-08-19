@@ -11,11 +11,7 @@ class OrderController extends Controller{
     public function index(){
         return view('order');
     }
-
-    public function qfd(){
-        return view('qfd');
-    }
-
+    
     public function orderinsert(Request $request){
         $order=new Orders;
         $order->productname=$request->productname;

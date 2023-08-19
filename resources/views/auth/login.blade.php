@@ -16,6 +16,7 @@
         <li><a href="contactUs.html">Contact Us</a></li>
     </ul>
 @section('content')
+<p>Already have an account?<a href="{{ route('register') }}"><button>Sign in</button></a></p>
 <div id="loginMainDiv">
         <div id="loginImageDiv">
 

@@ -23,13 +23,17 @@
     <div id="ImageSlideshowDiv">
         <div class="image-slideshow">
             <div class="image fade">
-            <img src="./images/go-green-web.jpg" alt="Mountain Top" class="slideImg">
+            <!-- <img src="./images/go-green-web.jpg" alt="Mountain Top" class="slideImg"> -->
+            <img src="{{URL('images/go-green-web.jpg')}}" alt="">
             </div>        
             <div class="image fade">
-            <img src="./images/green earth.jpg" alt="Palm Trees" class="slideImg">
+            <!-- <img src="./images/green earth.jpg" alt="Palm Trees" class="slideImg"> -->
+            <img src="{{URL('images/green earth.jpg')}}" alt="">
             </div>        
             <div class="image fade">
-            <img src="./images/TW-earth-day.webp" alt="Neon Sign" class="slideImg">
+            <!-- <img src="./images/TW-earth-day.webp" alt="Neon Sign" class="slideImg"> -->
+            <img src="{{URL('images/TW-earth-day.webp')}}" alt="">
+
             </div>
           </div>
     </div>

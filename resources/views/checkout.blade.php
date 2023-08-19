@@ -23,7 +23,7 @@
                     </div>
                     <div class="card-body">
                     <table id="checkoutTable" class="table table-hover table-condensed">
-                    <thead>
+                    <thead style="border:solid">
                         <tr>
                             <th>Product</th>
                             <th>Product Type</th>
@@ -33,7 +33,7 @@
 <!--                             <th style="width:10%"></th> -->
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody style="border:solid">
                         <tr>
                             <td data-th="Product">
                                 <div class="row">
@@ -41,7 +41,7 @@
                                         <h4 class="nomargin">
                                             @foreach($item as $i)
                                                 {{ $i->productname }}
-                                            @endforeach
+                                            
                                         </h4>
                                     </div>
                                 </div>
@@ -52,7 +52,7 @@
                                         <h4 class="nomargin">
                                             @foreach($item as $i)
                                                 {{ $i->producttype }}
-                                            @endforeach
+                                            
                                         </h4>
                                     </div>
                                 </div>
@@ -61,7 +61,7 @@
                             <td data-th="Quantity">
                                 @foreach($item as $i)
                                 <input type="number" value="{{ $i->productamount }}" class="form-control quantity cart_update" min="1" />
-                                @endforeach
+                                
                             </td>
                             <td data-th="Subtotal">৳500</td>
                         </tr>
@@ -71,14 +71,15 @@
                             <td colspan="5" style="text-align:right;"><h3><strong>Total ৳500</strong></h3></td>
                         </tr>
                         <tr>
+                        @endforeach
                             <td colspan="5" style="text-align:right;">
                                 <form action="/session" method="POST">
                                     <input type="hidden" name="_token" value="{{csrf_token()}}">
                                     <input type='hidden' name="total" value="500">
                                     <input type='hidden' name="producttype" value="{{ $i->producttype }}">
-                                    
+                                    @endforeach
                                     <input type='hidden' name="productamount" value="{{ $i->productamount }}">
-                                    
+                                    @endforeach
                                     <button class="btn btn-success" type="submit" id="checkout-live-button"><i class="fa fa-money"></i>Checkout</button>
                                 </form>
                             </td>

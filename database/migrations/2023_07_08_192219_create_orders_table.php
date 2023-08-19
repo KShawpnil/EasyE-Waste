@@ -19,7 +19,6 @@ return new class extends Migration
             $table->string('producttype');
             $table->string('productamount');
             $table->string('endproduct');
-            $table->string('status')->default('pending');
             $table->timestamps();
             $table->index('user_id');
         });
