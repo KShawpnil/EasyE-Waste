@@ -19,3 +19,14 @@
  */
 
 Encore\Admin\Form::forget(['map', 'editor']);
+// Use Encore\Admin\Admin;
+// Admin::html('<h1>lalalala</h1>');
+
+use Encore\Admin\Facades\Admin;
+
+Admin::navbar(function (\Encore\Admin\Widgets\Navbar $navbar) {
+
+    // $navbar->left(view('search-bar'));
+    // $navbar->right('html...');
+
+});

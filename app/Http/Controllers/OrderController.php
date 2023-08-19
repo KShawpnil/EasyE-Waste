@@ -24,14 +24,6 @@ class OrderController extends Controller{
         $order->endproduct=$request->endproduct;
         $order->user_id=Auth::user()->id;
         $order->save();
-        $id=$order->id;
         return redirect('qfd');
     }   
-
-    public function insertqfd(Request $request){
-        Orders::where('user_id',Auth::user()->id)->where('id',$id)->update([
-            'qfd'=>$request->qfd,
-        ]);
-        return redirect('home');
-    }
 }

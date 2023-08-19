@@ -27,7 +27,7 @@
                 <label for="productamount">Enter Product amount(KG)</label>
                 <input type="number" name="productamount" id="productamount" min="1" max="10">
             </div>
-            <div class="form-group">
+            <!-- <div class="form-group">
                 <p>Select Outcome</p>
                 <label for="recylce">Recylce</label>
                 <input type="radio" name="endproduct" id="recylce" value="recylce">
@@ -35,8 +35,8 @@
                 <input type="radio" name="endproduct" id="reuse" value="reuse">
                 <label for="reduce">Reduce</label>
                 <input type="radio" name="endproduct" id="reduce" value="reduce">
-            </div>
-            <input type="hidden" name="user_id" value="{{Auth::user()->id}}">
+            </div> -->
+            <!-- <input type="hidden" name="user_id" value="{{Auth::user()->id}}"> -->
             <div class="form-group">
                 <input type="submit" value="Go to QFD">
             </div>

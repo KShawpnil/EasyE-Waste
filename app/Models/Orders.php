@@ -12,7 +12,6 @@ class Orders extends Model{
         'producttype',
         'productamount',
         'endproduct',
-        'qfd',
     ];
 
     protected $attributes=[
