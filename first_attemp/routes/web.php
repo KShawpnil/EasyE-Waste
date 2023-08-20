@@ -3,7 +3,12 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\FormController;
+use App\Http\Controllers\Form2Controller;
+use App\Http\Controllers\demoController;
+use App\Http\Controllers\qfdController;
+use App\Models\Form2;
 use App\Models\Form;
+use App\Models\demoform;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,6 +30,18 @@ Route::resource('qfd',ProductController::class);
 Route::get('/create', [FormController::class, 'index']);
 
 Route::post('/create', [FormController::class, 'create']);
+
+Route::get('/create2', [Form2Controller::class, 'index']);
+
+Route::post('/create2', [Form2Controller::class, 'create2']);
+
+Route::get('/demo', [demoController::class, 'index']);
+
+Route::post('/demo', [demoController::class, 'demo']);
+
+Route::get('/create3', [qfdController::class, 'index']);
+
+Route::post('/create3', [qfdController::class, 'create2']);
 
 Route::get('/create2', function () {
     return view('create2');

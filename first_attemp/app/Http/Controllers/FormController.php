@@ -19,5 +19,6 @@ class FormController extends Controller
         $form->product_quantity = $request['product_quantity'];
         $form->endproduct = $request['endproduct'];
         $form->save();
+        return redirect('create2');
     }
 }

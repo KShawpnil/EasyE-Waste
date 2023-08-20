@@ -1,14 +1,15 @@
 body {
-    background-image: url('assets/img/background.png');
+    background-image: url('C:\xampp\htdocs\easyewaste\first_attemp\public\assets\img\background.png');
     background-size: cover;
 }
 
 #div1 {
-    height: 850px;
-    width: 900px;
+    /* height: 850px; */
+    height: 400px;
+    width: 1500px;
     background: linear-gradient(to top, rgb(227, 227, 227, 0.5)50%, rgba(227, 227, 227, 0.5)50%);
-    margin-top: 25px;
-    margin-left: 300px;
+    margin-top: 50px;
+    margin-left: 10px;
     border-radius: 10px;
 }
 
@@ -18,8 +19,8 @@ body {
 } */
 
 #div2 {
-    padding: 5px 10px;
-    margin: 5px 50px;
+    padding: 50px 10px;
+    margin: 100px 20px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: medium;
     /* font-weight: bold; */
@@ -28,6 +29,10 @@ body {
 h3 {
     color: black;
     font-weight: bold;
+}
+
+#impth{
+    text-align: center;
 }
 
 table {
@@ -52,7 +57,7 @@ tr:hover {
 }
 
 th {
-    background-color: #04AA6D;
+    background-color: #09a66d;
     color: white;
 }
 
@@ -121,13 +126,13 @@ th {
 }
 
 #submit {
-    margin-left: 350px;
+    margin-left: 650px;
     /* align-items: center; */
     color: rgb(10, 10, 10);
     border-style: solid;
     border-color: rgb(0, 0, 0);
-    width: 80px;
-    height: 25px;
+    width: 90px;
+    height: 30px;
     font-size: 15px;
     font-weight: bold;
 }

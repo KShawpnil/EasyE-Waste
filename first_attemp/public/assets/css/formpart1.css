@@ -27,7 +27,8 @@ th {
 }
 
 #submit {
-    margin-left: 250px;
+    margin-left: 40px;
+    padding: 2px, 2px, 2px, 2px;
     color: rgb(10, 10, 10);
     border-style: solid;
     border-color: rgb(0, 0, 0);
