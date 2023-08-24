@@ -39,7 +39,8 @@
             <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
                 <div class="d-flex justify-content-center">
                     <div class="text-center">
-                        <h1 class="mx-auto my-0 text-uppercase">Easy E-waste</h1>
+                        <h1 class="mx-auto my-0 text-uppercase" id='testTitle'>Easy E-waste</h1>
+                        <!-- <h2>EASY E WASTE</h2> -->
                         <h2 class="text-white-50 mx-auto mt-2 mb-5">An aproach towards efficient and sustainable e-waste management.</h2>
                         <a class="btn btn-primary" href="#about">Get Started</a>
                     </div>
@@ -51,7 +52,7 @@
             <div class="container px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-lg-8">
-                        <h2 class="text-white mb-4">About EasyE-waste</h2>
+                        <h2 class="text-white mb-4" >About EasyE-waste</h2>
                         <p class="text-white-50">
                         This software introduces a novel approach to sustainable e-waste management, using generic and software architectures, focusing on equipment quality improvement for environmental sustainability and customer requirements.
                         </p>

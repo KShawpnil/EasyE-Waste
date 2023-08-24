@@ -59,7 +59,7 @@
                 </tr>
                 
                 <tr>
-                    <td>Mouse</td> <td>Metal</td> <td>$6</th> <td><input type="number"></td> <td></td> <td><input type="submit" value="delete" class="deletebtn"></td>
+                    <td>Mouse</td> <td>Metal</td> <td>$6</th> <td><input type="number"></td> 
                 </tr>
             </table>
             <hr>

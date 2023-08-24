@@ -55,7 +55,7 @@
         </div>
         <div class="description">
             <h2 id='appointmentHeader'>Book Appointment</h2>
-            <p class="paragraph">
+            <p  id="bookingParagraph">
                 Book your appointment with us for selling or recycling or e-waste. We assure you a great service. Thank you
         
             </p>
