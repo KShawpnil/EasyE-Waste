@@ -37,93 +37,17 @@
                         <li class="nav-item"><a class="nav-link" href="/#about">About</a></li>
                         <li class="nav-item"><a class="nav-link" href="/#projects">Our Services</a></li>
                         <li class="nav-item"><a class="nav-link" href="#signup">Contact</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{{url('login/#login')}}">Sign In</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#signup"><img src="{{asset('images/bell_icon_255865.ico')}}" width=50px alt=""></a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Username</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
         <!-- Masthead-->
         <header class="masthead">
-            <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
-                <div class="d-flex justify-content-center">
-                    <div class="text-center">
-                        <h1 class="mx-auto my-0 text-uppercase">Easy E-waste</h1>
-                        <h2 class="text-white-50 mx-auto mt-2 mb-5">An aproach towards efficient and sustainable e-waste management.</h2>
-                        <a class="btn btn-primary" href="/#about">Get Started</a>
-                    </div>
-                </div>
-            </div>
+            <!-- code likha baki -->
         </header>
-        <!-- registration section-->
-        <section class="ftco-section" id='registration'>
-		<div class="container">
-			<div class="row justify-content-center">
-				<div class="col-md-6 text-center mb-5">
-					<h2 class="heading-section">Register Here</h2>
-				</div>
-			</div>
-			<div class="row justify-content-center">
-				<div class="col-md-7 col-lg-5">
-					<div class="wrap">
-						<div class="img" style="background-image: url('/images/img/save-environment-5624599-4707348.webp'); background-size: cover;"></div>
-						<div class="login-wrap p-4 p-md-5">
-			      	<div class="d-flex">
-			      		<div class="w-100">
-			      			<h3 class="mb-4">Sign Up</h3>
-			      		</div>
-								<!-- <div class="w-100">
-									<p class="social-media d-flex justify-content-end">
-										<a href="#" class="social-icon d-flex align-items-center justify-content-center"><span class="fa fa-facebook"></span></a>
-										<a href="#" class="social-icon d-flex align-items-center justify-content-center"><span class="fa fa-twitter"></span></a>
-									</p>
-								</div> -->
-			      	</div>
-							<form action="#" class="signin-form">
-
-                            <div class="form-group mt-3">
-			      			<input type="text" class="form-control" required>
-			      			<label class="form-control-placeholder" for="username">Full Name</label>
-			      		    </div>                
-                            <div class="form-group mt-3">
-			      			<input type="email" class="form-control" required>
-			      			<label class="form-control-placeholder" for="username">E-mail</label>
-			      		    </div>                
-			      		<div class="form-group mt-3">
-			      			<input type="text" class="form-control" required>
-			      			<label class="form-control-placeholder" for="username">Phone Number</label>
-			      		</div>
-		            <div class="form-group">
-		              <input id="password-field" type="password" class="form-control" required>
-		              <label class="form-control-placeholder" for="password">Password</label>
-		              <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
-		            </div>
-		            <div class="form-group">
-		              <input id="password-field" type="password" class="form-control" required>
-		              <label class="form-control-placeholder" for="password">Confirm Password</label>
-		              <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
-		            </div>
-		            <div class="form-group">
-		            	<button type="submit" class="form-control btn btn-primary rounded submit px-3">Sign Up</button>
-		            </div>
-		            <!-- <div class="form-group d-md-flex">
-		            	<div class="w-50 text-left">
-			            	<label class="checkbox-wrap checkbox-primary mb-0">Remember Me
-									  <input type="checkbox" checked>
-									  <span class="checkmark"></span>
-										</label>
-									</div>
-									<div class="w-50 text-md-right">
-										<a href="#">Forgot Password</a>
-									</div>
-		            </div> -->
-		          </form>
-		          
-		        </div>
-		      </div>
-				</div>
-			</div>
-		</div>
-	</section>
+        
 
         
         <!-- Signup-->

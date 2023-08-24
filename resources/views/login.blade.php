@@ -65,7 +65,7 @@
 			<div class="row justify-content-center">
 				<div class="col-md-7 col-lg-5">
 					<div class="wrap">
-						<div class="img" style="background-image: url({{asset('images/img/background 1.png')}});"></div>
+						<div class="img" style="background-image: url('/images/img/save-environment-5624599-4707348.webp'); background-size: cover;"></div>
 						<div class="login-wrap p-4 p-md-5">
 			      	<div class="d-flex">
 			      		<div class="w-100">
