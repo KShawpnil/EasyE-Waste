@@ -85,6 +85,14 @@
 			      			<label class="form-control-placeholder" for="username">Full Name</label>
 			      		    </div>                
                             <div class="form-group mt-3">
+			      			<input type="text" class="form-control" required>
+			      			<label class="form-control-placeholder" for="username">Company Name</label>
+			      		    </div>                
+                            <div class="form-group mt-3">
+			      			<input type="text" class="form-control" required>
+			      			<label class="form-control-placeholder" for="username">Company Address</label>
+			      		    </div>                
+                            <div class="form-group mt-3">
 			      			<input type="email" class="form-control" required>
 			      			<label class="form-control-placeholder" for="username">E-mail</label>
 			      		    </div>                
