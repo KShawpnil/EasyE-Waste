@@ -1,0 +1,53 @@
+th{
+    width: 300px;
+    text-align: center;
+}
+
+#checkout{
+    background-color: white;
+    height: 400px;
+    width: 1600px;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    
+    text-align: center;
+    padding-top: 20px;
+    border-radius: 20px;
+    color: black;
+}
+
+#checkoutTable{
+    font-size: large;
+    margin-top: 20px;
+}
+
+.deletebtn{
+    background-color: rgb(231, 33, 33);
+    color: white;
+    width: 120px;
+    height: 40px;
+    font-size: large;
+    border-radius: 20px;
+}
+
+td{
+    padding: 10px;
+    padding: 40px;
+}
+
+
+#totalBill{
+    font-size: large;
+}
+
+#checkoutBTN{
+    width: 150px;
+    height: 40px;
+    background-color: rgb(41, 170, 41);
+    border-radius: 20px;
+    font-size: large;
+}
+
+#totalBill{
+    margin-left: 50%;
+}

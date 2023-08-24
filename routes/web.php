@@ -28,3 +28,6 @@ Route::get('/registration', function () {
 Route::get('/dashboard', function () {
     return view('dashboard');
 });
+Route::get('/checkout', function () {
+    return view('checkout');
+});
