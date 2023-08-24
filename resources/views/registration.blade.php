@@ -92,14 +92,15 @@
 			      			<input type="text" class="form-control" required>
 			      			<label class="form-control-placeholder" for="username">Company Address</label>
 			      		    </div>                
-                            <div class="form-group mt-3">
-			      			<input type="email" class="form-control" required>
-			      			<label class="form-control-placeholder" for="username">E-mail</label>
-			      		    </div>                
+                                          
 			      		<div class="form-group mt-3">
 			      			<input type="text" class="form-control" required>
 			      			<label class="form-control-placeholder" for="username">Phone Number</label>
 			      		</div>
+                          <div class="form-group mt-3">
+			      			<input type="email" class="form-control" required>
+			      			<label class="form-control-placeholder" for="username">E-mail</label>
+			      		    </div>  
 		            <div class="form-group">
 		              <input id="password-field" type="password" class="form-control" required>
 		              <label class="form-control-placeholder" for="password">Password</label>
