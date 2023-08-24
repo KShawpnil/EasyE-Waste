@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Grayscale - Start Bootstrap Theme</title>
+        <title>EasyE-waste</title>
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
@@ -29,7 +29,7 @@
                         <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
                         <li class="nav-item"><a class="nav-link" href="#projects">Our Services</a></li>
                         <li class="nav-item"><a class="nav-link" href="#signup">Contact</a></li>
-                        <li class="nav-item"><a class="nav-link" href="">Sign In</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{url('login/#login')}}">Sign In</a></li>
                     </ul>
                 </div>
             </div>
