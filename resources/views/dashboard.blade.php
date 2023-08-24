@@ -21,6 +21,7 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         
         <link rel="stylesheet" href="{{asset('css/style2.css')}}">
+        <link rel="stylesheet" href="{{asset('css/dashboard.css')}}">
 
     </head>
     <body id="page-top">
@@ -45,7 +46,25 @@
         </nav>
         <!-- Masthead-->
         <header class="masthead">
-            <!-- code likha baki -->
+            <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
+                <div class="d-flex justify-content-center">
+                    <div class="text-center">
+                    <div class="dashboardItems">
+        <div class="gif">
+            
+        </div>
+        <div class="description">
+            <h2 id='appointmentHeader'>Book Appointment</h2>
+            <p class="paragraph">
+                Book your appointment with us for selling or recycling or e-waste. We assure you a great service. Thank you
+        
+            </p>
+            <input type="submit" value="Book Appointment" class="appointmentBookBTN">
+        </div>
+    </div>
+                    </div>
+                </div>
+            </div>
         </header>
         
 
