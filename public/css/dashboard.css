@@ -51,8 +51,10 @@
 
   #appointmentHeader{
     margin-left: 13%;
+    font-weight: bold;
   }
 
   #bookingParagraph{
     color: black;
+    margin-top: 15%;
   }

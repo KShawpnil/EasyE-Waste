@@ -20,8 +20,18 @@
 
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         
-        <link rel="stylesheet" href="{{asset('css/style2.css')}}">
-        <link rel="stylesheet" href="{{asset('css/dashboard.css')}}">
+        <!-- <link rel="stylesheet" href="{{asset('css/style2.css')}}">
+        <link rel="stylesheet" href="{{asset('css/dashboard.css')}}"> -->
+
+        <!-- booking form css -->
+        <!-- Google font -->
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link type="text/css" rel="stylesheet" href="{{asset('appcss/bootstrap.min.css')}}" />
+
+    <!-- Custom stlylesheet -->
+    <link type="text/css" rel="stylesheet" href="{{asset('css/appcss/appointmentstyle.css')}}" />
 
     </head>
     <body id="page-top">
@@ -38,7 +48,7 @@
                         <li class="nav-item"><a class="nav-link" href="/#about">About</a></li>
                         <li class="nav-item"><a class="nav-link" href="/#projects">Our Services</a></li>
                         <li class="nav-item"><a class="nav-link" href="#signup">Contact</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#signup"><img src="{{asset('images/bell_icon_255865.ico')}}" width= "30px" alt=""></a></li>
+                        <li class="nav-item"><a class="nav-link" href="#signup"><img src="{{asset('images/bell_updated.ico')}}" width = "30px" alt=""></a></li>
                         <li class="nav-item"><a class="nav-link" href="#">Username</a></li>
                     </ul>
                 </div>
@@ -49,20 +59,97 @@
             <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
                 <div class="d-flex justify-content-center">
                     <div class="text-center">
-                    <div class="dashboardItems">
-        <div class="gif">
-            
-        </div>
-        <div class="description">
-            <h2 id='appointmentHeader'>Book Appointment</h2>
-            <p  id="bookingParagraph">
-                Book your appointment with us for selling or recycling or e-waste. We assure you a great service. Thank you
-        
-            </p>
-            <input type="submit" value="Book Appointment" class="appointmentBookBTN">
-        </div>
-    </div>
-                    </div>
+                        
+                    <div class="booking-form">
+
+                    
+						<form>
+							<div class="form-group">
+								<!-- <div class="form-checkbox">
+									<label for="roundtrip">
+										<input type="radio" id="roundtrip" name="flight-type">
+										<span></span>Roundtrip
+									</label>
+									<label for="one-way">
+										<input type="radio" id="one-way" name="flight-type">
+										<span></span>One way
+									</label>
+									<label for="multi-city">
+										<input type="radio" id="multi-city" name="flight-type">
+										<span></span>Multi-City
+									</label>
+								</div> -->
+							</div>
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group">
+										<span class="form-label">Product Name</span>
+										<input class="form-control" type="text" placeholder="Enter Product Name">
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<span class="form-label">Product Type</span>
+										<input class="form-control" type="text" placeholder="Enter Product Type">
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group">
+										<span class="form-label">Product Amount</span>
+										<input class="form-control" type="number" placeholder="Enter Amount">
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<span class="form-label">Product Outcome</span>
+										<input class="form-control" type="text" placeholder="Enter Product Type">
+									</div>
+								</div>
+							</div>
+                            
+									<div class="form-btn">
+										<button class="submit-btn">Confirm</button>
+									</div>
+								
+							<!-- <div class="row">
+								<div class="col-md-3">
+									<div class="form-group">
+										<span class="form-label">Product Amount</span>
+										<input class="form-control" type="number" required>
+									</div>
+								</div>
+								<div class="col-md-3">
+									<div class="form-group">
+										<span class="form-label">Product Outcome</span>
+										<input class="form-control" type="text" required>
+									</div>
+								</div>
+								
+								
+							</div> -->
+							<!-- <div class="row">
+								<div class="col-md-3">
+									<div class="form-group">
+										<span class="form-label">Travel class</span>
+										<select class="form-control">
+											<option>Economy class</option>
+											<option>Business class</option>
+											<option>First class</option>
+										</select>
+										<span class="select-arrow"></span>
+									</div>
+								</div>
+								<div class="col-md-3">
+									<div class="form-btn">
+										<button class="submit-btn">Show flights</button>
+									</div>
+								</div>
+							</div> -->
+						</form>
+					</div>
+                </div>
                 </div>
             </div>
         </header>
@@ -136,5 +223,10 @@
         <script src="{{asset('js/popper.js')}}"></script>
         <script src="{{asset('js/bootstrap.min.js')}}"></script>
         <script src="{{asset('js/main.js')}}"></script>
+
+
+        <!-- booking form js -->
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     </body>
 </html>

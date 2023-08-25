@@ -70,7 +70,7 @@
                     <div class="col-xl-4 col-lg-5">
                         <div class="featured-text text-center text-lg-left">
                             <h4>Our Services</h4>
-                            <p class="text-black-50 mb-0">Grayscale is open source and MIT licensed. This means you can use it for any project - even commercial projects! Download it, customize it, and publish your website!</p>
+                            <p class="text-black-50 mb-0">Our aim is to reduce the electronic wastes and build a green earth. Poet Wendell Berry once said "Earth is what we all have in common."</p>
                         </div>
                     </div>
                 </div>
