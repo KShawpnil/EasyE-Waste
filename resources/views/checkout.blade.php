@@ -35,8 +35,8 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="/#about">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/#projects">Our Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/dashboard/#trackOrder">Previous Orders</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/dashboard/#trackOrder">Track My Order</a></li>
                         <li class="nav-item"><a class="nav-link" href="#signup">Contact</a></li>
                         <li class="nav-item"><a class="nav-link" href="#signup"><img src="{{asset('images/bell_icon_255865.ico')}}" width= "30px" alt=""></a></li>
                         <li class="nav-item"><a class="nav-link" href="#">Username</a></li>
