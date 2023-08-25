@@ -188,9 +188,33 @@
                         @endforeach
                     </td>
                 </tr>
-
                 <tr>
-                    <td colspan="6" align="center"><a href="{{url('/checkout')}}"><button id="submit" type="submit" name="submit" value="submit">Complete</button></a></td>
+                    <td colspan="2">Total Importance</td>
+                    <td>{{ $data[0] }}</td>
+                    <td>{{ $data[1] }}</td>
+                    <td>{{ $data[2] }}</td>
+                    <td>{{ $data[3] }}</td>
+                </tr>
+                <tr>
+                    <td colspan="2">Performance</td>
+                    <td>{{ $performance[0] }}</td>
+                    <td>{{ $performance[1] }}</td>
+                    <td>{{ $performance[2] }}</td>
+                    <td>{{ $performance[3] }}</td>
+                </tr>
+                <tr>
+                    <form action="{{url('/')}}/qfdresults" method="POST">
+                    @csrf
+                        <input type="hidden" name="total_importance1" value="{{ $data[0] }}">
+                        <input type="hidden" name="total_importance2" value="{{ $data[1] }}">
+                        <input type="hidden" name="total_importance3" value="{{ $data[2] }}">
+                        <input type="hidden" name="total_importance4" value="{{ $data[3] }}">
+                        <input type="hidden" name="performance1" value="{{ $performance[0] }}">
+                        <input type="hidden" name="performance2" value="{{ $performance[1] }}">
+                        <input type="hidden" name="performance3" value="{{ $performance[2] }}">
+                        <input type="hidden" name="performance4" value="{{ $performance[3] }}">
+                        <td colspan="6" align="center"><input type="submit" value="Next"></td>
+                    </form>
                 </tr>
             </table>
         </div>

@@ -38,5 +38,5 @@ Route::post('/qfd',[QFDController::class,'insertqfd']);
 
 Route::get('/qfdresults',[QFDResultsController::class,'index'])->name('qfdresults');
 Route::get('/qfdresults',[QFDResultsController::class,'fetch'])->name('qfdresults');
-
+Route::post('/qfdresults',[QFDResultsController::class,'insert'])->name('qfdresults');
 

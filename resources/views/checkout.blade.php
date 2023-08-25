@@ -30,7 +30,6 @@
                             <th>Price</th>
                             <th>Quantity</th>
                             <th>Subtotal</th>
-<!--                             <th style="width:10%"></th> -->
                         </tr>
                     </thead>
                     <tbody style="border:solid">
@@ -41,7 +40,6 @@
                                         <h4 class="nomargin">
                                             @foreach($item as $i)
                                                 {{ $i->productname }}
-                                            
                                         </h4>
                                     </div>
                                 </div>
@@ -60,16 +58,12 @@
                             <td data-th="Price">৳500</td>
                             <td data-th="Quantity">
                                 @foreach($item as $i)
-                                <input type="text" value="{{ $i->productamount }}" class="form-control quantity cart_update" min="1" />
-                                
+                                  {{ $i->productamount }}                                
                             </td>
                             <td data-th="Subtotal">৳500</td>
                         </tr>
                     </tbody>
                     <tfoot>
-                        <tr>
-                            <td colspan="5" style="text-align:right;"><h3><strong>Total ৳500</strong></h3></td>
-                        </tr>
                         <tr>
                         @endforeach
                             <td colspan="5" style="text-align:right;">
@@ -83,6 +77,9 @@
                                     <button class="btn btn-success" type="submit" id="checkout-live-button"><i class="fa fa-money"></i>Checkout</button>
                                 </form>
                             </td>
+                        </tr>
+                        <tr>
+                            <td colspan="5" style="text-align:right;"><h3><strong>{{ $i->productamount*10 }}</strong></h3></td>
                         </tr>
                     </tfoot>
                 </table>

@@ -17,13 +17,6 @@
             <div class="form-group">
                 <label for="producttype">Enter Product Type</label>
                 <input type="text" name="producttype" id="producttype">
-                <!-- <p>Enter Product Type</p>
-                <label for="plastic">Plastic</label>
-                <input type="radio" name="producttype" id="plastic" value="plastic">
-                <label for="metal">Metal</label>
-                <input type="radio" name="producttype" id="metal" value="metal">
-                <label for="glass">Glass</label>
-                <input type="radio" name="producttype" id="glass" value="glass"> -->
             </div>
             <div class="form-group">
                 <label for="productamount">Enter Product amount(KG)</label>
@@ -31,16 +24,6 @@
             </div>
                 <label for="endproduct">Enter Product Outcome</label>
                 <input type="text" name="endproduct" id="endproduct">
-            <!-- <div class="form-group">
-                <p>Select Outcome</p>
-                <label for="recylce">Recylce</label>
-                <input type="radio" name="endproduct" id="recylce" value="recylce">
-                <label for="reuse">Reuse</label>
-                <input type="radio" name="endproduct" id="reuse" value="reuse">
-                <label for="reduce">Reduce</label>
-                <input type="radio" name="endproduct" id="reduce" value="reduce">
-            </div> -->
-            <!-- <input type="hidden" name="user_id" value="{{Auth::user()->id}}"> -->
             <div class="form-group">
                 <input type="submit" value="Go to QFD">
             </div>
