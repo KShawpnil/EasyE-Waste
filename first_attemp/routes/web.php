@@ -1,14 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ProductController;
-use App\Http\Controllers\FormController;
-use App\Http\Controllers\Form2Controller;
-use App\Http\Controllers\demoController;
-use App\Http\Controllers\qfdController;
-use App\Models\Form2;
-use App\Models\Form;
-use App\Models\demoform;
+use App\Http\Controllers\OrderController;
+use App\Http\Controllers\StripeController;
+use App\Http\Controllers\QFDController;
+use App\Http\Controllers\QFDResultsController;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -25,43 +23,20 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('qfd',ProductController::class);
+Auth::routes();
 
-Route::get('/create', [FormController::class, 'index']);
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/placeorder',[OrderController::class,'index'])->name('placeorder');
+Route::post('/placeorder',[OrderController::class,'orderinsert']);
+Route::get('/checkout', [App\Http\Controllers\StripeController::class,'index'])->name('checkout');
+Route::get('/checkout', [App\Http\Controllers\StripeController::class,'details'])->name('checkout');
+Route::post('/session', [App\Http\Controllers\StripeController::class,'session'])->name('session');
+Route::get('/success', [App\Http\Controllers\StripeController::class,'success'])->name('success');
+// Route::get('/checkout',[App\Http\Controllers\StripeController::class,'session']);
+Route::get('/qfd',[QFDController::class,'index'])->name('qfd');
+Route::post('/qfd',[QFDController::class,'insertqfd']);
 
-Route::post('/create', [FormController::class, 'create']);
+Route::get('/qfdresults',[QFDResultsController::class,'index'])->name('qfdresults');
+Route::get('/qfdresults',[QFDResultsController::class,'fetch'])->name('qfdresults');
 
-Route::get('/create2', [Form2Controller::class, 'index']);
 
-Route::post('/create2', [Form2Controller::class, 'create2']);
-
-Route::get('/demo', [demoController::class, 'index']);
-
-Route::post('/demo', [demoController::class, 'demo']);
-
-Route::get('/create3', [qfdController::class, 'index']);
-
-Route::post('/create3', [qfdController::class, 'create2']);
-
-Route::get('/create2', function () {
-    return view('create2');
-});
-
-// Route::get('/form', function () {
-//     $form = Form::all();
-//     echo "<pre>";
-//     print_r($form->toArray());
-// });
-
-// Route::get('/form', [Form2Controller::class, 'index']);
-
-// Route::post('/form', [Form2Controller::class, 'store']);
-
-// Route::post('/create', function () {
-//     $form = new Form();
-//     $form->product_name = request('product_name');
-//     $form->product_type = request('product_type');
-//     $form->product_quantity = request('product_quantity');
-//     $form->endproduct = request('endproduct');
-//     $form->save();
-// });
