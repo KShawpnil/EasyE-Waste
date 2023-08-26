@@ -23,7 +23,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// Auth::routes();
+Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/placeorder',[OrderController::class,'index'])->name('placeorder');
@@ -36,5 +36,7 @@ Route::get('/success', [App\Http\Controllers\StripeController::class,'success'])
 Route::get('/qfd',[QFDController::class,'index'])->name('qfd');
 Route::post('/qfd',[QFDController::class,'insertqfd']);
 
+Route::get('/qfdresults',[QFDResultsController::class,'index'])->name('qfdresults');
+Route::get('/qfdresults',[QFDResultsController::class,'fetch'])->name('qfdresults');
 
 
