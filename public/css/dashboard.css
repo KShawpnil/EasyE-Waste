@@ -1,0 +1,60 @@
+.dashboardItems{
+    height: 400px;
+    width: 1200px;
+    background-color: white;
+    text-align: center;
+    margin-left: 2%;
+    margin-right: 20%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    display: flex;
+    border-radius: 20px;
+    /* padding-top: 4%; */
+    box-shadow: 0 0 5px #383737;
+
+  }
+
+  .gif{
+    background-image: url('/images/img/appointment.gif');
+    background-size: cover;
+    height: 400px;
+    width: 500px;
+    border-radius: 20px;
+    
+  }
+
+  .description{
+    text-align: center;
+    height: 400px;
+    width: 700px;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 4%;
+  }
+
+  .paragraph{
+    font-size: large;
+    margin-top: 7%;
+  }
+
+  .appointmentBookBTN{
+    height: 60px;
+    width:300px;
+    font-size: 25px;
+    background-color: #64A19D;
+    border-radius: 20px;
+    margin-top: 2%;
+    color: white;
+    font-weight: bold;
+
+  }
+
+  #appointmentHeader{
+    margin-left: 13%;
+    font-weight: bold;
+  }
+
+  #bookingParagraph{
+    color: black;
+    margin-top: 15%;
+  }

@@ -17,6 +17,16 @@
                     {{ __('You are logged in!') }}
                 </div>
                 <a href="{{url('/placeorder')}}"><button>Place Order</button></a>
+                <h1>
+                @foreach($status as $status)
+                    @if($status->status=='paid')
+                    <p>Your order {{ $status->id }} has been Paid</p>
+                    @endif
+                    @if($status->status=='delivered')
+                    <p>Your order {{ $status->id }} has been Delivered</p>
+                    @endif
+                @endforeach
+                </h1>
             </div>
         </div>
     </div>

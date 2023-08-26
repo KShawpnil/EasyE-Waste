@@ -1,0 +1,32 @@
+
+
+.btn:hover{
+    color:#fff;
+}
+
+#searchBar:focus{
+       
+  
+    box-shadow: 0px 0px 0px;
+    border-color:#f8c146;
+    outline: 0px;
+}
+
+#searchBar {
+    border: 1px solid #f8c146;
+}
+
+#searchRow{
+    margin-left: 17%;
+    
+}
+ 
+#PreviousOrdersHeading{
+    margin-left: 45%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+#trackOrder{
+    height: fit-content;
+}

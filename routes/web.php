@@ -32,7 +32,6 @@ Route::get('/checkout', [App\Http\Controllers\StripeController::class,'index'])-
 Route::get('/checkout', [App\Http\Controllers\StripeController::class,'details'])->name('checkout');
 Route::post('/session', [App\Http\Controllers\StripeController::class,'session'])->name('session');
 Route::get('/success', [App\Http\Controllers\StripeController::class,'success'])->name('success');
-// Route::get('/checkout',[App\Http\Controllers\StripeController::class,'session']);
 Route::get('/qfd',[QFDController::class,'index'])->name('qfd');
 Route::post('/qfd',[QFDController::class,'insertqfd']);
 
