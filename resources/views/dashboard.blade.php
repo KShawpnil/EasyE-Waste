@@ -58,7 +58,6 @@
             <h2 id='appointmentHeader'>Book Appointment</h2>
             <p  id="bookingParagraph">
                 Book your appointment with us for selling or recycling or e-waste. We assure you a great service. Thank you
-        
             </p>
             <a class="btn btn-primary" href="{{url('/placeorder')}}">Book Appointment</a>
         </div>
@@ -67,6 +66,9 @@
                 </div>
             </div>
         </header>
+        <p><h1>
+
+        </h1></p>
         
 
         <!-- Previous Orders -->
