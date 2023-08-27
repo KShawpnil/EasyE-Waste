@@ -24,7 +24,26 @@
         <link rel="stylesheet" href="{{asset('css/dashboard.css')}}">
         <link rel="stylesheet" href="{{asset('css/trackOrder.css')}}">
         <link rel="stylesheet" href="{{asset('css/searchBar.css')}}">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+        <script src="https://js.pusher.com/8.2.0/pusher.min.js"></script>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css"></script> -->
+        <script>
 
+            // Enable pusher logging - don't include this in production
+            Pusher.logToConsole = true;
+
+            var pusher = new Pusher('972d9a3395677ad6b78d', {
+            cluster: 'ap2'
+            });
+
+            var channel = pusher.subscribe('popup-channel');
+            channel.bind('status-update', function(data){
+                toastr.success(JSON.stringify(data.name)+' has been updated');
+                // alert(JSON.stringify(data));
+            });
+        </script>
+        <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
     </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -39,7 +58,17 @@
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item"><a class="nav-link" href="/dashboard/#trackOrder">Previous Orders</a></li>
                         <li class="nav-item"><a class="nav-link" href="/dashboard/#trackOrder">Track My Order</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#signup"><img src="{{asset('images/bell_icon_255865.ico')}}" width= "30px" alt=""></a></li>
+                        <li class="nav-item">
+                        <form action="{{url('/')}}/notification" method="POST" class="nav-link">
+                            @csrf
+                            @foreach($result as $result)
+                            @if($loop->first)
+                            <input type="hidden" name="name" value="{{ $result->productname }}">
+                            @endif
+                            @endforeach
+                            <input type="image" width= "30px" src="{{asset('images/bell_icon_255865.ico')}}" alt="Submit Form" />
+                        </form>
+                        </li>
                         <li class="nav-item"><a class="nav-link" href="#">Username</a></li>
                     </ul>
                 </div>

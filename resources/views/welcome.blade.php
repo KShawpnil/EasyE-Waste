@@ -115,22 +115,7 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Project Four Row-->
-                    <div class="row gx-0 justify-content-center">
-                        <div class="col-lg-6"><img class="img-fluid" src="{{asset('images/img/truck-delivery-unscreen.gif')}}" alt="..." width=400px /></div>
-                        <div class="col-lg-6 order-lg-first">
-                            <div class="bg-green text-center h-100 project">
-                                <div class="d-flex h-100">
-                                    <div class="project-text w-100 my-auto text-center text-lg-right">
-                                        <h4 class="text-white">Quality Function Deployment</h4>
-                                        <p class="mb-0 text-white-50">Another example of a project with its respective description. These sections work well responsively as well!</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
-                
             </div>
         </section>
         <!-- Signup-->

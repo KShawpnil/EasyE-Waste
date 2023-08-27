@@ -26,6 +26,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::post('/notification', [App\Http\Controllers\NotificationController::class,'notification']);
 Route::get('/placeorder',[OrderController::class,'index'])->name('placeorder');
 Route::post('/placeorder',[OrderController::class,'orderinsert']);
 Route::get('/checkout', [App\Http\Controllers\StripeController::class,'index'])->name('checkout');

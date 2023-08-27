@@ -25,7 +25,7 @@ class HomeController extends Controller
      * @return \Illuminate\Contracts\Support\Renderable
      */
     public function index(){
-        $status=DB::table('orders')->where('user_id',Auth::user()->id)->get();
-        return view('dashboard')->with(compact('status'));
+        $result=DB::table('orders')->where('user_id',Auth::user()->id)->latest("updated_at")->get();
+        return view('dashboard')->with(compact('result'));
     }
 }
