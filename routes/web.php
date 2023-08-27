@@ -37,3 +37,6 @@ Route::get('/appointment', function () {
 Route::get('/qfd', function () {
     return view('qfd');
 });
+Route::get('/qfdresults', function () {
+    return view('qfdresults');
+});
