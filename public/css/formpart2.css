@@ -1,0 +1,162 @@
+/* body {
+    background-image: url('C:\xampp\htdocs\easyewaste\first_attemp\public\assets\img\background.png');
+    background-size: cover;
+} */
+
+#div1 {
+    
+    height: 700px;
+    width: 1500px;
+    background:white;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 2%;
+    padding-top: 6%;
+    padding-left: 2%;
+    padding-bottom: 8%;
+    border-radius: 10px;
+    display: flex;
+}
+
+/* h1 {
+    padding-top: 15px;
+    padding-left: 20px;
+} */
+
+/* #div2 {
+    padding: 50px 10px;
+    margin: 100px 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    font-weight: bold;
+    
+} */
+
+h3 {
+    color: black;
+    font-weight: bold;
+}
+
+#impth{
+    text-align: center;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    
+}
+
+th,
+td {
+    text-align: left;
+    padding: 8px;
+    /* border-bottom: 1px solid #101010; */
+    border: 2px solid #000000;
+}
+
+tr:nth-child(even) {
+    background-color: #ececec
+}
+
+tr:hover {
+    background-color: #00ca80;
+}
+
+th {
+    background-color: #09a66d;
+    color: white;
+}
+
+/* .container {
+    float: left;
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+
+
+
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+} */
+
+/* Hide the browser's default radio button */
+/* .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+} */
+
+/* Create a custom radio button */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 17px;
+    width: 17px;
+    background-color: #5e5e5e;
+    /* border-radius: 50%; */
+}
+
+/* On mouse-over, add a grey background color */
+/* .container:hover input~.checkmark {
+    background-color: #ccc;
+} */
+
+/* When the radio button is checked, add a blue background */
+/* .container input:checked~.checkmark {
+    background-color: #03c0ff;
+} */
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+/* .container input:checked~.checkmark:after {
+    display: block;
+}
+
+.container .checkmark:after {
+    left: 5.5px;
+    top: 1px;
+    width: 3px;
+    height: 9px;
+    border: solid rgb(255, 255, 255);
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+} */
+
+#submit {
+    margin-left: 42%;
+    /* align-items: center; */
+    color: white;
+    border-style: solid;
+    border-color: rgb(0, 0, 0);
+    width: 20%;
+    height: 40px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 20px;
+    background-color: #00ca80;
+}
+
+#qfdTable{
+    margin-left: 12%;
+    height: 500px;
+}
+
+#qfdSection{
+    height: 30%;
+
+}
+

@@ -34,3 +34,6 @@ Route::get('/checkout', function () {
 Route::get('/appointment', function () {
     return view('appointment');
 });
+Route::get('/qfd', function () {
+    return view('qfd');
+});
