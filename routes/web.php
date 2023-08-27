@@ -40,3 +40,9 @@ Route::get('/qfd', function () {
 Route::get('/qfdresults', function () {
     return view('qfdresults');
 });
+Route::get('/prevOrders', function () {
+    return view('prevOrders');
+});
+Route::get('/trackorder', function () {
+    return view('trackorder');
+});

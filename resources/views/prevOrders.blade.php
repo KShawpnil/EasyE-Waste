@@ -14,24 +14,8 @@
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="{{asset('css/style.css')}}" rel="stylesheet" />
-
-        <!-- login css link -->
-        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
-
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        
-        <!-- <link rel="stylesheet" href="{{asset('css/style2.css')}}">
-        <link rel="stylesheet" href="{{asset('css/dashboard.css')}}"> -->
-
-        <!-- booking form css -->
-        <!-- Google font -->
-	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400" rel="stylesheet">
-
-    <!-- Bootstrap -->
-    <link type="text/css" rel="stylesheet" href="{{asset('appcss/bootstrap.min.css')}}" />
-
-    <!-- Custom stlylesheet -->
-    <link type="text/css" rel="stylesheet" href="{{asset('css/appcss/appointmentstyle.css')}}" />
+        <link href="{{asset('css/formpart2.css')}}" rel="stylesheet" />
+        <link href="{{asset('css/trackorder.css')}}" rel="stylesheet" />
 
     </head>
     <body id="page-top">
@@ -45,9 +29,9 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="/#about">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/#projects">Our Services</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#signup">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/prevOrders">Previous Orders</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/trackOrder">Track My Order</a></li>
+                        
                         
                         <li class="nav-item"><a class="nav-link" href="#">Username</a></li>
                     </ul>
@@ -59,110 +43,39 @@
             <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
                 <div class="d-flex justify-content-center">
                     <div class="text-center">
-                        
-                    <div class="booking-form">
-
-                    
-						<form>
-							<div class="form-group">
-								<!-- <div class="form-checkbox">
-									<label for="roundtrip">
-										<input type="radio" id="roundtrip" name="flight-type">
-										<span></span>Roundtrip
-									</label>
-									<label for="one-way">
-										<input type="radio" id="one-way" name="flight-type">
-										<span></span>One way
-									</label>
-									<label for="multi-city">
-										<input type="radio" id="multi-city" name="flight-type">
-										<span></span>Multi-City
-									</label>
-								</div> -->
-							</div>
-							<div class="row">
-								<div class="col-md-6">
-									<div class="form-group">
-										<span class="form-label">Product Name</span>
-										<input class="form-control" type="text" placeholder="Enter Product Name">
-									</div>
-								</div>
-								<div class="col-md-6">
-									<div class="form-group">
-										<span class="form-label">Product Type</span>
-										<input class="form-control" type="text" placeholder="Enter Product Type">
-									</div>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-md-6">
-									<div class="form-group">
-										<span class="form-label">Product Amount</span>
-										<input class="form-control" type="number" placeholder="Enter Amount">
-									</div>
-								</div>
-								<div class="col-md-6">
-									<div class="form-group">
-										<span class="form-label">Product Outcome</span>
-										<input class="form-control" type="text" placeholder="Enter Product Type">
-									</div>
-								</div>
-							</div>
-                            
-									<div class="form-btn">
-										<button class="submit-btn">Confirm</button>
-									</div>
-								
-							<!-- <div class="row">
-								<div class="col-md-3">
-									<div class="form-group">
-										<span class="form-label">Product Amount</span>
-										<input class="form-control" type="number" required>
-									</div>
-								</div>
-								<div class="col-md-3">
-									<div class="form-group">
-										<span class="form-label">Product Outcome</span>
-										<input class="form-control" type="text" required>
-									</div>
-								</div>
-								
-								
-							</div> -->
-							<!-- <div class="row">
-								<div class="col-md-3">
-									<div class="form-group">
-										<span class="form-label">Travel class</span>
-										<select class="form-control">
-											<option>Economy class</option>
-											<option>Business class</option>
-											<option>First class</option>
-										</select>
-										<span class="select-arrow"></span>
-									</div>
-								</div>
-								<div class="col-md-3">
-									<div class="form-btn">
-										<button class="submit-btn">Show flights</button>
-									</div>
-								</div>
-							</div> -->
-						</form>
-					</div>
-                </div>
+                        <div id="whitediv">
+               
+                            <form action="">
+                                <table id="prevordertable">
+                                <tr>
+                                    <th>Product Name</th>
+                                    <th>Type</th>
+                                    <th>End Product</th>
+                                    <th>Order Date</th>
+                                    <th>Delivery Date</th>
+                                </tr>
+                                <tr>
+                                    <td>Mouse</td>
+                                    <td>metal</td>
+                                    <td>reduce</td>
+                                    <td>2023-08-17 20:13:48</td>
+                                    <td>2023-08-17 20:13:48</td>
+                                </tr>
+                                </table>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
         </header>
+        <!-- About-->
         
-
+        <!-- Quality Function Deployment-->
+       
         
-        <!-- Signup-->
+        <!-- Contact-->
         <section class="signup-section" id="signup">
-            <div class="container px-4 px-lg-5">
-                <div class="row gx-4 gx-lg-5">
-                  
-                </div>
-            </div>
+            
         </section>
         <!-- Contact-->
         <section class="contact-section bg-darkgreen">
@@ -217,16 +130,5 @@
         <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
-
-        <!-- login js -->
-        <script src="{{asset('js/jquery.min.js')}}"></script>
-        <script src="{{asset('js/popper.js')}}"></script>
-        <script src="{{asset('js/bootstrap.min.js')}}"></script>
-        <script src="{{asset('js/main.js')}}"></script>
-
-
-        <!-- booking form js -->
-        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     </body>
 </html>
