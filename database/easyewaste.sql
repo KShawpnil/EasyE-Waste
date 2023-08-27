@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 19, 2023 at 10:50 PM
+-- Generation Time: Aug 28, 2023 at 12:09 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -64,7 +64,9 @@ INSERT INTO `admin_menu` (`id`, `parent_id`, `order`, `title`, `icon`, `uri`, `p
 (6, 2, 6, 'Menu', 'fa-bars', 'auth/menu', NULL, NULL, NULL),
 (7, 2, 7, 'Operation log', 'fa-history', 'auth/logs', NULL, NULL, NULL),
 (8, 0, 0, 'Users', 'fa-user', '/users', NULL, '2023-08-18 12:22:32', '2023-08-18 12:22:32'),
-(9, 0, 0, 'Orders', 'fa-archive', '/orders', NULL, '2023-08-18 12:23:06', '2023-08-18 12:23:06');
+(9, 0, 0, 'Orders', 'fa-archive', '/orders', NULL, '2023-08-18 12:23:06', '2023-08-18 12:23:06'),
+(10, 0, 0, 'QFD', 'fa-cubes', '/qfd', NULL, '2023-08-26 12:40:19', '2023-08-26 12:40:19'),
+(12, 0, 0, 'QFD Results', 'fa-cloud-upload', '/qfdresults', NULL, '2023-08-26 12:47:21', '2023-08-26 12:47:21');
 
 -- --------------------------------------------------------
 
@@ -236,7 +238,87 @@ INSERT INTO `admin_operation_log` (`id`, `user_id`, `path`, `method`, `ip`, `inp
 (146, 1, 'admin', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-08-19 14:41:31', '2023-08-19 14:41:31'),
 (147, 1, 'admin/orders', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-08-19 14:41:32', '2023-08-19 14:41:32'),
 (148, 1, 'admin/users', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-08-19 14:41:32', '2023-08-19 14:41:32'),
-(149, 1, 'admin/orders', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-08-19 14:41:33', '2023-08-19 14:41:33');
+(149, 1, 'admin/orders', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-08-19 14:41:33', '2023-08-19 14:41:33'),
+(150, 1, 'admin/auth/users', 'GET', '127.0.0.1', '[]', '2023-08-24 15:55:18', '2023-08-24 15:55:18'),
+(151, 1, 'admin/auth/users', 'GET', '127.0.0.1', '[]', '2023-08-24 15:55:21', '2023-08-24 15:55:21'),
+(152, 1, 'admin/auth/users', 'GET', '127.0.0.1', '[]', '2023-08-26 10:15:43', '2023-08-26 10:15:43'),
+(153, 1, 'admin/orders', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-08-26 10:15:49', '2023-08-26 10:15:49'),
+(154, 1, 'admin/orders/27/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-08-26 10:15:56', '2023-08-26 10:15:56'),
+(155, 1, 'admin/orders/27', 'PUT', '127.0.0.1', '{\"user_id\":\"1\",\"productname\":\"testy\",\"producttype\":\"testy\",\"productamount\":\"7\",\"endproduct\":\"testy\",\"status\":\"delivered\",\"_token\":\"BTtYgGFAFFQsWNxrdN0iwVBtbm7P3JSa7M4bibr9\",\"_method\":\"PUT\",\"_previous_\":\"http:\\/\\/127.0.0.1:8000\\/admin\\/orders\"}', '2023-08-26 10:16:04', '2023-08-26 10:16:04'),
+(156, 1, 'admin/orders', 'GET', '127.0.0.1', '[]', '2023-08-26 10:16:04', '2023-08-26 10:16:04'),
+(157, 1, 'admin', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-08-26 12:37:00', '2023-08-26 12:37:00'),
+(158, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-08-26 12:37:03', '2023-08-26 12:37:03'),
+(159, 1, 'admin/auth/users', 'GET', '127.0.0.1', '[]', '2023-08-26 12:39:53', '2023-08-26 12:39:53'),
+(160, 1, 'admin/auth/menu', 'POST', '127.0.0.1', '{\"parent_id\":\"0\",\"title\":\"QFD\",\"icon\":\"fa-cubes\",\"uri\":\"\\/qfd\",\"roles\":[null],\"permission\":null,\"_token\":\"I9JyUnFR6DN6FkazQXQ3JdDiOy3iaoEXoefDwDb5\"}', '2023-08-26 12:40:19', '2023-08-26 12:40:19'),
+(161, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '[]', '2023-08-26 12:40:19', '2023-08-26 12:40:19'),
+(162, 1, 'admin/qfd', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-08-26 12:40:27', '2023-08-26 12:40:27'),
+(163, 1, 'admin/orders', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-08-26 12:40:38', '2023-08-26 12:40:38'),
+(164, 1, 'admin/users', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-08-26 12:40:39', '2023-08-26 12:40:39'),
+(165, 1, 'admin/orders', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-08-26 12:40:44', '2023-08-26 12:40:44'),
+(166, 1, 'admin', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-08-26 12:40:46', '2023-08-26 12:40:46'),
+(167, 1, 'admin/orders', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-08-26 12:40:47', '2023-08-26 12:40:47'),
+(168, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-08-26 12:41:49', '2023-08-26 12:41:49'),
+(169, 1, 'admin/auth/menu', 'POST', '127.0.0.1', '{\"parent_id\":\"0\",\"title\":\"QFD Result\",\"icon\":\"fa-cloud-upload\",\"uri\":\"\\/qfdresults\",\"roles\":[null],\"permission\":null,\"_token\":\"I9JyUnFR6DN6FkazQXQ3JdDiOy3iaoEXoefDwDb5\"}', '2023-08-26 12:42:22', '2023-08-26 12:42:22'),
+(170, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '[]', '2023-08-26 12:42:22', '2023-08-26 12:42:22'),
+(171, 1, 'admin/qfdresults', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-08-26 12:42:24', '2023-08-26 12:42:24'),
+(172, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '[]', '2023-08-26 12:42:25', '2023-08-26 12:42:25'),
+(173, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '[]', '2023-08-26 12:46:05', '2023-08-26 12:46:05'),
+(174, 1, 'admin/qfdresults', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-08-26 12:46:08', '2023-08-26 12:46:08'),
+(175, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '[]', '2023-08-26 12:46:09', '2023-08-26 12:46:09'),
+(176, 1, 'admin/auth/menu/11/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-08-26 12:46:12', '2023-08-26 12:46:12'),
+(177, 1, 'admin/auth/menu/11', 'DELETE', '127.0.0.1', '{\"_method\":\"delete\",\"_token\":\"I9JyUnFR6DN6FkazQXQ3JdDiOy3iaoEXoefDwDb5\"}', '2023-08-26 12:46:28', '2023-08-26 12:46:28'),
+(178, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-08-26 12:46:28', '2023-08-26 12:46:28'),
+(179, 1, 'admin/auth/menu', 'POST', '127.0.0.1', '{\"parent_id\":\"0\",\"title\":\"QFD Results\",\"icon\":\"fa-cloud-upload\",\"uri\":\"\\/qfdresults\",\"roles\":[null],\"permission\":null,\"_token\":\"I9JyUnFR6DN6FkazQXQ3JdDiOy3iaoEXoefDwDb5\"}', '2023-08-26 12:47:21', '2023-08-26 12:47:21'),
+(180, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '[]', '2023-08-26 12:47:21', '2023-08-26 12:47:21'),
+(181, 1, 'admin/qfdresults', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-08-26 12:47:24', '2023-08-26 12:47:24'),
+(182, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '[]', '2023-08-26 12:47:25', '2023-08-26 12:47:25'),
+(183, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-08-26 12:47:27', '2023-08-26 12:47:27'),
+(184, 1, 'admin/qfdresults', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-08-26 12:47:28', '2023-08-26 12:47:28'),
+(185, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '[]', '2023-08-26 12:47:29', '2023-08-26 12:47:29'),
+(186, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '[]', '2023-08-26 12:49:39', '2023-08-26 12:49:39'),
+(187, 1, 'admin/qfdresults', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-08-26 12:51:09', '2023-08-26 12:51:09'),
+(188, 1, 'admin/orders', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-08-26 13:33:42', '2023-08-26 13:33:42'),
+(189, 1, 'admin/orders/3/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-08-26 13:36:47', '2023-08-26 13:36:47'),
+(190, 1, 'admin/orders/3', 'PUT', '127.0.0.1', '{\"user_id\":\"2\",\"productname\":\"monitor\",\"producttype\":\"glass\",\"productamount\":\"2\",\"endproduct\":\"recylce\",\"status\":\"paid\",\"_token\":\"I9JyUnFR6DN6FkazQXQ3JdDiOy3iaoEXoefDwDb5\",\"_method\":\"PUT\",\"_previous_\":\"http:\\/\\/127.0.0.1:8000\\/admin\\/orders\"}', '2023-08-26 13:36:52', '2023-08-26 13:36:52'),
+(191, 1, 'admin/orders', 'GET', '127.0.0.1', '[]', '2023-08-26 13:36:53', '2023-08-26 13:36:53'),
+(192, 1, 'admin/orders/27/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-08-26 13:47:08', '2023-08-26 13:47:08'),
+(193, 1, 'admin/orders/27', 'PUT', '127.0.0.1', '{\"user_id\":\"1\",\"productname\":\"testy\",\"producttype\":\"testy\",\"productamount\":\"7\",\"endproduct\":\"testy\",\"status\":\"delivered\",\"_token\":\"I9JyUnFR6DN6FkazQXQ3JdDiOy3iaoEXoefDwDb5\",\"_method\":\"PUT\",\"_previous_\":\"http:\\/\\/127.0.0.1:8000\\/admin\\/orders\"}', '2023-08-26 13:47:13', '2023-08-26 13:47:13'),
+(194, 1, 'admin/orders', 'GET', '127.0.0.1', '[]', '2023-08-26 13:47:14', '2023-08-26 13:47:14'),
+(195, 1, 'admin/orders/25/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-08-26 13:48:33', '2023-08-26 13:48:33'),
+(196, 1, 'admin/orders/25', 'PUT', '127.0.0.1', '{\"user_id\":\"1\",\"productname\":\"test\",\"producttype\":\"test\",\"productamount\":\"2\",\"endproduct\":\"test\",\"status\":\"delivered\",\"_token\":\"I9JyUnFR6DN6FkazQXQ3JdDiOy3iaoEXoefDwDb5\",\"_method\":\"PUT\",\"_previous_\":\"http:\\/\\/127.0.0.1:8000\\/admin\\/orders\"}', '2023-08-26 13:48:38', '2023-08-26 13:48:38'),
+(197, 1, 'admin/orders', 'GET', '127.0.0.1', '[]', '2023-08-26 13:48:38', '2023-08-26 13:48:38'),
+(198, 1, 'admin/orders/28/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-08-26 13:52:22', '2023-08-26 13:52:22'),
+(199, 1, 'admin/orders/28', 'PUT', '127.0.0.1', '{\"user_id\":\"1\",\"productname\":\"e\",\"producttype\":\"e\",\"productamount\":\"5\",\"endproduct\":\"e\",\"status\":\"done\",\"_token\":\"I9JyUnFR6DN6FkazQXQ3JdDiOy3iaoEXoefDwDb5\",\"_method\":\"PUT\",\"_previous_\":\"http:\\/\\/127.0.0.1:8000\\/admin\\/orders\"}', '2023-08-26 13:52:28', '2023-08-26 13:52:28'),
+(200, 1, 'admin/orders', 'GET', '127.0.0.1', '[]', '2023-08-26 13:52:28', '2023-08-26 13:52:28'),
+(201, 1, 'admin/orders/27/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-08-26 13:52:49', '2023-08-26 13:52:49'),
+(202, 1, 'admin/orders/27', 'PUT', '127.0.0.1', '{\"user_id\":\"1\",\"productname\":\"testy\",\"producttype\":\"testy\",\"productamount\":\"7\",\"endproduct\":\"testy\",\"status\":\"done\",\"_token\":\"I9JyUnFR6DN6FkazQXQ3JdDiOy3iaoEXoefDwDb5\",\"_method\":\"PUT\",\"_previous_\":\"http:\\/\\/127.0.0.1:8000\\/admin\\/orders\"}', '2023-08-26 13:52:54', '2023-08-26 13:52:54'),
+(203, 1, 'admin/orders', 'GET', '127.0.0.1', '[]', '2023-08-26 13:52:54', '2023-08-26 13:52:54'),
+(204, 1, 'admin/orders/25/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-08-26 13:55:38', '2023-08-26 13:55:38'),
+(205, 1, 'admin/orders/25', 'PUT', '127.0.0.1', '{\"user_id\":\"1\",\"productname\":\"test\",\"producttype\":\"test\",\"productamount\":\"2\",\"endproduct\":\"test\",\"status\":\"done\",\"_token\":\"I9JyUnFR6DN6FkazQXQ3JdDiOy3iaoEXoefDwDb5\",\"_method\":\"PUT\",\"_previous_\":\"http:\\/\\/127.0.0.1:8000\\/admin\\/orders\"}', '2023-08-26 13:55:43', '2023-08-26 13:55:43'),
+(206, 1, 'admin/orders', 'GET', '127.0.0.1', '[]', '2023-08-26 13:55:44', '2023-08-26 13:55:44'),
+(207, 1, 'admin/orders/28/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-08-26 14:04:13', '2023-08-26 14:04:13'),
+(208, 1, 'admin/orders/28', 'PUT', '127.0.0.1', '{\"user_id\":\"1\",\"productname\":\"e\",\"producttype\":\"e\",\"productamount\":\"5\",\"endproduct\":\"e\",\"status\":\"a\",\"_token\":\"I9JyUnFR6DN6FkazQXQ3JdDiOy3iaoEXoefDwDb5\",\"_method\":\"PUT\",\"_previous_\":\"http:\\/\\/127.0.0.1:8000\\/admin\\/orders\"}', '2023-08-26 14:04:16', '2023-08-26 14:04:16'),
+(209, 1, 'admin/orders', 'GET', '127.0.0.1', '[]', '2023-08-26 14:04:17', '2023-08-26 14:04:17'),
+(210, 1, 'admin/orders/28/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-08-26 14:04:23', '2023-08-26 14:04:23'),
+(211, 1, 'admin/orders/28', 'PUT', '127.0.0.1', '{\"user_id\":\"1\",\"productname\":\"e\",\"producttype\":\"e\",\"productamount\":\"5\",\"endproduct\":\"e\",\"status\":\"done\",\"_token\":\"I9JyUnFR6DN6FkazQXQ3JdDiOy3iaoEXoefDwDb5\",\"_method\":\"PUT\",\"_previous_\":\"http:\\/\\/127.0.0.1:8000\\/admin\\/orders\"}', '2023-08-26 14:04:26', '2023-08-26 14:04:26'),
+(212, 1, 'admin/orders', 'GET', '127.0.0.1', '[]', '2023-08-26 14:04:26', '2023-08-26 14:04:26'),
+(213, 1, 'admin/orders/26/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-08-26 14:04:30', '2023-08-26 14:04:30'),
+(214, 1, 'admin/orders/26', 'PUT', '127.0.0.1', '{\"user_id\":\"3\",\"productname\":\"test\",\"producttype\":\"test\",\"productamount\":\"1\",\"endproduct\":\"test\",\"status\":\"done\",\"_token\":\"I9JyUnFR6DN6FkazQXQ3JdDiOy3iaoEXoefDwDb5\",\"_method\":\"PUT\",\"_previous_\":\"http:\\/\\/127.0.0.1:8000\\/admin\\/orders\"}', '2023-08-26 14:04:34', '2023-08-26 14:04:34'),
+(215, 1, 'admin/orders', 'GET', '127.0.0.1', '[]', '2023-08-26 14:04:34', '2023-08-26 14:04:34'),
+(216, 1, 'admin/orders/28/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-08-26 14:44:05', '2023-08-26 14:44:05'),
+(217, 1, 'admin/orders/28', 'PUT', '127.0.0.1', '{\"user_id\":\"1\",\"productname\":\"e\",\"producttype\":\"e\",\"productamount\":\"5\",\"endproduct\":\"e\",\"status\":\"delivered\",\"_token\":\"I9JyUnFR6DN6FkazQXQ3JdDiOy3iaoEXoefDwDb5\",\"_method\":\"PUT\",\"_previous_\":\"http:\\/\\/127.0.0.1:8000\\/admin\\/orders\"}', '2023-08-26 14:44:11', '2023-08-26 14:44:11'),
+(218, 1, 'admin/orders', 'GET', '127.0.0.1', '[]', '2023-08-26 14:44:11', '2023-08-26 14:44:11'),
+(219, 1, 'admin/orders/27/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-08-26 14:44:25', '2023-08-26 14:44:25'),
+(220, 1, 'admin/orders/27', 'PUT', '127.0.0.1', '{\"user_id\":\"1\",\"productname\":\"testy\",\"producttype\":\"testy\",\"productamount\":\"7\",\"endproduct\":\"testy\",\"status\":\"delivered\",\"_token\":\"I9JyUnFR6DN6FkazQXQ3JdDiOy3iaoEXoefDwDb5\",\"_method\":\"PUT\",\"_previous_\":\"http:\\/\\/127.0.0.1:8000\\/admin\\/orders\"}', '2023-08-26 14:44:30', '2023-08-26 14:44:30'),
+(221, 1, 'admin/orders', 'GET', '127.0.0.1', '[]', '2023-08-26 14:44:30', '2023-08-26 14:44:30'),
+(222, 1, 'admin/orders', 'GET', '127.0.0.1', '[]', '2023-08-27 10:27:08', '2023-08-27 10:27:08'),
+(223, 1, 'admin/orders/28/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-08-27 10:27:43', '2023-08-27 10:27:43'),
+(224, 1, 'admin/orders/28', 'PUT', '127.0.0.1', '{\"user_id\":\"1\",\"productname\":\"e\",\"producttype\":\"e\",\"productamount\":\"5\",\"endproduct\":\"e\",\"status\":\"done\",\"_token\":\"TvsyV9TRInqUbKpfOqfchGQQ35TLXKd40AuU9qjj\",\"_method\":\"PUT\",\"_previous_\":\"http:\\/\\/127.0.0.1:8000\\/admin\\/orders\"}', '2023-08-27 10:27:49', '2023-08-27 10:27:49'),
+(225, 1, 'admin/orders', 'GET', '127.0.0.1', '[]', '2023-08-27 10:27:49', '2023-08-27 10:27:49'),
+(226, 1, 'admin/orders', 'GET', '127.0.0.1', '[]', '2023-08-27 16:08:08', '2023-08-27 16:08:08'),
+(227, 1, 'admin/orders/29/edit', 'GET', '127.0.0.1', '{\"_pjax\":\"#pjax-container\"}', '2023-08-27 16:08:16', '2023-08-27 16:08:16'),
+(228, 1, 'admin/orders/29', 'PUT', '127.0.0.1', '{\"user_id\":\"1\",\"productname\":\"late\",\"producttype\":\"late\",\"productamount\":\"3\",\"endproduct\":\"late\",\"status\":\"done\",\"_token\":\"TvsyV9TRInqUbKpfOqfchGQQ35TLXKd40AuU9qjj\",\"_method\":\"PUT\",\"_previous_\":\"http:\\/\\/127.0.0.1:8000\\/admin\\/orders\"}', '2023-08-27 16:08:21', '2023-08-27 16:08:21'),
+(229, 1, 'admin/orders', 'GET', '127.0.0.1', '[]', '2023-08-27 16:08:21', '2023-08-27 16:08:21');
 
 -- --------------------------------------------------------
 
@@ -443,7 +525,9 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (17, '2023_07_08_192219_create_orders_table', 6),
 (18, '2023_08_07_113855_add_qfd_to_orders_table', 7),
 (20, '2023_08_07_114656_add_qfd_to_orders_table', 8),
-(21, '2023_08_19_183348_create_q_f_d_s_table', 9);
+(21, '2023_08_19_183348_create_q_f_d_s_table', 9),
+(22, '2023_08_24_214533_create_q_f_d_results_table', 10),
+(23, '2023_08_24_215628_create_q_f_d_results_table', 11);
 
 -- --------------------------------------------------------
 
@@ -469,11 +553,14 @@ CREATE TABLE `orders` (
 
 INSERT INTO `orders` (`id`, `user_id`, `productname`, `producttype`, `productamount`, `endproduct`, `status`, `created_at`, `updated_at`) VALUES
 (2, 2, 'keyboard', 'glass', 1, 'reuse', 'pending', '2023-08-04 01:02:16', '2023-08-04 01:02:16'),
-(3, 2, 'monitor', 'glass', 2, 'recylce', 'pending', '2023-08-04 01:02:29', '2023-08-04 01:02:29'),
-(13, 1, 'mouse', 'metal', 6, 'reduce', 'paid', '2023-08-17 14:23:48', '2023-08-17 14:35:07'),
-(24, 2, 'lala', 'lala', 1, 'lala', 'pending', '2023-08-19 13:37:03', '2023-08-19 13:37:03'),
-(25, 1, 'test', 'test', 2, 'test', 'pending', '2023-08-19 14:31:52', '2023-08-19 14:31:52'),
-(26, 3, 'test', 'test', 1, 'test', 'paid', '2023-08-19 14:38:41', '2023-08-19 14:39:49');
+(3, 2, 'monitor', 'glass', 2, 'recylce', 'paid', '2023-08-04 01:02:29', '2023-08-26 13:36:53'),
+(13, 1, 'mouse', 'metal', 6, 'reduce', 'paid', '2023-08-17 14:23:48', '2023-08-27 15:55:49'),
+(24, 2, 'lala', 'lala', 1, 'lala', 'paid', '2023-08-19 13:37:03', '2023-08-19 13:37:03'),
+(25, 1, 'test', 'test', 2, 'test', 'paid', '2023-08-19 14:31:52', '2023-08-27 15:55:49'),
+(26, 3, 'test', 'test', 1, 'test', 'done', '2023-08-19 14:38:41', '2023-08-26 14:04:34'),
+(27, 1, 'testy', 'testy', 7, 'testy', 'paid', '2023-08-24 14:12:49', '2023-08-27 15:55:49'),
+(28, 1, 'e', 'e', 5, 'e', 'paid', '2023-08-26 11:24:02', '2023-08-27 15:55:49'),
+(29, 1, 'late', 'late', 3, 'late', 'done', '2023-08-27 15:45:41', '2023-08-27 16:08:21');
 
 -- --------------------------------------------------------
 
@@ -521,43 +608,32 @@ CREATE TABLE `personal_access_tokens` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `qfd`
+-- Table structure for table `q_f_d_results`
 --
 
-CREATE TABLE `qfd` (
-  `id` int(11) NOT NULL,
-  `user_id` int(11) NOT NULL,
-  `cr1` varchar(100) NOT NULL,
-  `crrank1` int(11) NOT NULL,
-  `wastemanage1` int(11) NOT NULL,
-  `wastemini1` int(11) NOT NULL,
-  `wastecollect1` int(11) NOT NULL,
-  `produra1` int(11) NOT NULL,
-  `crrank2` int(11) NOT NULL,
-  `wastemanage2` int(11) NOT NULL,
-  `wastemini2` int(11) NOT NULL,
-  `wastecollect2` int(11) NOT NULL,
-  `produra2` int(11) NOT NULL,
-  `crrank3` int(11) NOT NULL,
-  `wastemanage3` int(11) NOT NULL,
-  `wastemini3` int(11) NOT NULL,
-  `wastecollect3` int(11) NOT NULL,
-  `produra3` int(11) NOT NULL,
-  `crrank4` int(11) NOT NULL,
-  `wastemanage4` int(11) NOT NULL,
-  `wastemini4` int(11) NOT NULL,
-  `wastecollect4` int(11) NOT NULL,
-  `produra4` int(11) NOT NULL,
-  `crrank5` int(11) NOT NULL,
-  `wastemanage5` int(11) NOT NULL,
-  `wastemini5` int(11) NOT NULL,
-  `wastecollect5` int(11) NOT NULL,
-  `produra5` int(11) NOT NULL,
-  `cr2` varchar(100) NOT NULL,
-  `cr3` varchar(100) NOT NULL,
-  `cr4` varchar(100) NOT NULL,
-  `cr5` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+CREATE TABLE `q_f_d_results` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `user_id` bigint(20) UNSIGNED NOT NULL,
+  `total_importance1` varchar(255) NOT NULL,
+  `total_importance2` varchar(255) NOT NULL,
+  `total_importance3` varchar(255) NOT NULL,
+  `total_importance4` varchar(255) NOT NULL,
+  `performance1` varchar(255) NOT NULL,
+  `performance2` varchar(255) NOT NULL,
+  `performance3` varchar(255) NOT NULL,
+  `performance4` varchar(255) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `q_f_d_results`
+--
+
+INSERT INTO `q_f_d_results` (`id`, `user_id`, `total_importance1`, `total_importance2`, `total_importance3`, `total_importance4`, `performance1`, `performance2`, `performance3`, `performance4`, `created_at`, `updated_at`) VALUES
+(1, 1, '51', '51', '47', '65', '0.041960784313725', '0.041960784313725', '0.045531914893617', '0.032923076923077', '2023-08-24 23:29:56', '2023-08-24 23:29:56'),
+(2, 1, '90', '78', '49', '78', '0.032777777777778', '0.037820512820513', '0.060204081632653', '0.037820512820513', '2023-08-26 11:30:42', '2023-08-26 11:30:42'),
+(3, 1, '39', '51', '39', '81', '0.053846153846154', '0.041176470588235', '0.053846153846154', '0.025925925925926', '2023-08-27 15:55:20', '2023-08-27 15:55:20');
 
 -- --------------------------------------------------------
 
@@ -610,7 +686,11 @@ INSERT INTO `q_f_d_s` (`id`, `user_id`, `cr1`, `crrank1`, `wastemanage1`, `waste
 (1, 1, 'Biodegradable', 2, 3, 3, 3, 9, 'Recyleing of materials', 3, 3, 9, 9, 3, 'Extraction of heavy materials', 3, 3, 9, 3, 1, 'Transfer of ewaste', 2, 3, 3, 3, 3, 'Remaining waste disposal', 2, 3, 3, 1, 9, '2023-08-19 13:34:57', '2023-08-19 13:34:57'),
 (2, 2, 'Biodegradable', 1, 9, 9, 9, 9, 'Recyleing of materials', 1, 9, 9, 9, 9, 'Extraction of heavy materials', 1, 9, 9, 9, 9, 'Transfer of ewaste', 1, 9, 9, 9, 9, 'Remaining waste disposal', 1, 9, 9, 9, 9, '2023-08-19 13:37:23', '2023-08-19 13:37:23'),
 (3, 1, 'Biodegradable', 2, 0, 9, 9, 9, 'Recyleing of materials', 1, 3, 3, 3, 3, 'Extraction of heavy materials', 2, 9, 1, 1, 1, 'Transfer of ewaste', 4, 3, 3, 3, 3, 'Remaining waste disposal', 3, 9, 9, 9, 9, '2023-08-19 14:32:13', '2023-08-19 14:32:13'),
-(4, 3, 'Biodegradable', 1, 0, 9, 1, 9, 'Recyleing of materials', 2, 0, 3, 0, 3, 'Extraction of heavy materials', 3, 1, 1, 1, 1, 'Transfer of ewaste', 4, 3, 0, 3, 0, 'Remaining waste disposal', 5, 9, 1, 9, 1, '2023-08-19 14:39:03', '2023-08-19 14:39:03');
+(4, 3, 'Biodegradable', 1, 0, 9, 1, 9, 'Recyleing of materials', 2, 0, 3, 0, 3, 'Extraction of heavy materials', 3, 1, 1, 1, 1, 'Transfer of ewaste', 4, 3, 0, 3, 0, 'Remaining waste disposal', 5, 9, 1, 9, 1, '2023-08-19 14:39:03', '2023-08-19 14:39:03'),
+(5, 1, 'Biodegradable', 3, 9, 9, 3, 9, 'Recyleing of materials', 2, 3, 3, 9, 3, 'Extraction of heavy materials', 3, 1, 1, 3, 9, 'Transfer of ewaste', 2, 3, 3, 1, 1, 'Remaining waste disposal', 1, 9, 9, 9, 3, '2023-08-24 14:13:08', '2023-08-24 14:13:08'),
+(6, 1, 'Biodegradable', 3, 3, 9, 0, 9, 'Recyleing of materials', 4, 9, 3, 1, 3, 'Extraction of heavy materials', 3, 3, 1, 3, 9, 'Transfer of ewaste', 3, 3, 3, 9, 3, 'Remaining waste disposal', 3, 9, 9, 3, 1, '2023-08-26 11:30:37', '2023-08-26 11:30:37'),
+(7, 1, 'Biodegradable', 1, 9, 9, 9, 9, 'Recyleing of materials', 2, 3, 3, 9, 3, 'Extraction of heavy materials', 3, 3, 3, 9, 3, 'Transfer of ewaste', 2, 3, 9, 9, 9, 'Remaining waste disposal', 1, 9, 9, 9, 9, '2023-08-27 15:46:09', '2023-08-27 15:46:09'),
+(8, 1, 'Biodegradable', 1, 9, 9, 9, 9, 'Recyleing of materials', 2, 3, 3, 3, 9, 'Extraction of heavy materials', 3, 3, 3, 3, 9, 'Transfer of ewaste', 2, 3, 9, 3, 9, 'Remaining waste disposal', 1, 9, 9, 9, 9, '2023-08-27 15:54:59', '2023-08-27 15:54:59');
 
 -- --------------------------------------------------------
 
@@ -637,7 +717,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `companyname`, `email`, `phone`, `companyaddress`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'test', 'testcompany', 'test@email.com', '01234567910', 'address', NULL, '$2y$10$1.F..bLYSH35Tdj/N3U2A.jly.q5D8CKvTQQpRCqAGjQjAMqkN8R2', NULL, '2023-08-01 09:24:44', '2023-08-01 09:24:44'),
+(1, 'test', 'testcompany', 'test@email.com', '01234567910', 'address', NULL, '$2y$10$1.F..bLYSH35Tdj/N3U2A.jly.q5D8CKvTQQpRCqAGjQjAMqkN8R2', 'j8gO2AEgEsO0Jysl4bwBlMZvl1GFoWFG365XiUHShhJKQShs3a1KyM1ai830', '2023-08-01 09:24:44', '2023-08-01 09:24:44'),
 (2, 'Mr. A', 'A', 'test1@email.com', '012345679100', 'A', NULL, '$2y$10$GHAB694.nrvtvHKEJyx8eOrSqLUSJPsGD5r71P/FxNgcyBZ6Mi1HK', NULL, '2023-08-04 01:02:05', '2023-08-04 01:02:05'),
 (3, 'testname', 'testcompanyname', 'testemail@email.com', '01000000000', 'testaddress', NULL, '$2y$10$rbS6FCt2KoLI8BuVvtsa2uZZ8hrqTvdrP6vy2cspk2sWwRTqGF0xS', NULL, '2023-08-19 14:38:19', '2023-08-19 14:38:19');
 
@@ -758,10 +838,11 @@ ALTER TABLE `personal_access_tokens`
   ADD KEY `personal_access_tokens_tokenable_type_tokenable_id_index` (`tokenable_type`,`tokenable_id`);
 
 --
--- Indexes for table `qfd`
+-- Indexes for table `q_f_d_results`
 --
-ALTER TABLE `qfd`
-  ADD PRIMARY KEY (`id`);
+ALTER TABLE `q_f_d_results`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `q_f_d_results_user_id_foreign` (`user_id`);
 
 --
 -- Indexes for table `q_f_d_s`
@@ -791,13 +872,13 @@ ALTER TABLE `admins`
 -- AUTO_INCREMENT for table `admin_menu`
 --
 ALTER TABLE `admin_menu`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `admin_operation_log`
 --
 ALTER TABLE `admin_operation_log`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=150;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=230;
 
 --
 -- AUTO_INCREMENT for table `admin_permissions`
@@ -833,13 +914,13 @@ ALTER TABLE `logs`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT for table `personal_access_tokens`
@@ -848,16 +929,16 @@ ALTER TABLE `personal_access_tokens`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `qfd`
+-- AUTO_INCREMENT for table `q_f_d_results`
 --
-ALTER TABLE `qfd`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `q_f_d_results`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `q_f_d_s`
 --
 ALTER TABLE `q_f_d_s`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `users`
@@ -874,6 +955,12 @@ ALTER TABLE `users`
 --
 ALTER TABLE `orders`
   ADD CONSTRAINT `orders_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE;
+
+--
+-- Constraints for table `q_f_d_results`
+--
+ALTER TABLE `q_f_d_results`
+  ADD CONSTRAINT `q_f_d_results_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE;
 
 --
 -- Constraints for table `q_f_d_s`

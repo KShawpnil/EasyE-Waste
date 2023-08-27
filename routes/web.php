@@ -5,6 +5,8 @@ use App\Http\Controllers\OrderController;
 use App\Http\Controllers\StripeController;
 use App\Http\Controllers\QFDController;
 use App\Http\Controllers\QFDResultsController;
+use App\Http\Controllers\PreviousController;
+use App\Http\Controllers\TrackController;
 
 
 
@@ -35,8 +37,9 @@ Route::post('/session', [App\Http\Controllers\StripeController::class,'session']
 Route::get('/success', [App\Http\Controllers\StripeController::class,'success'])->name('success');
 Route::get('/qfd',[QFDController::class,'index'])->name('qfd');
 Route::post('/qfd',[QFDController::class,'insertqfd']);
-
 Route::get('/qfdresults',[QFDResultsController::class,'index'])->name('qfdresults');
 Route::get('/qfdresults',[QFDResultsController::class,'fetch'])->name('qfdresults');
 Route::post('/qfdresults',[QFDResultsController::class,'insert'])->name('qfdresults');
+Route::get('/previousorder',[PreviousController::class,'index'])->name('previousorder');
+Route::get('/trackorder',[TrackController::class,'index'])->name('trackorder');
 

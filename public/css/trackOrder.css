@@ -1,33 +1,28 @@
-@media (min-width: 1025px) {
-    .h-custom {
-    height: 100vh !important;
-    }
-    }
-    
-    .horizontal-timeline .items {
-    border-top: 2px solid #ddd;
-    }
-    
-    .horizontal-timeline .items .items-list {
-    position: relative;
-    margin-right: 0;
-    }
-    
-    .horizontal-timeline .items .items-list:before {
-    content: "";
-    position: absolute;
-    height: 8px;
-    width: 8px;
-    border-radius: 50%;
-    background-color: #ddd;
-    top: 0;
-    margin-top: -5px;
-    }
-    
-    .horizontal-timeline .items .items-list {
-    padding-top: 15px;
-    }
 
 
   
      
+#whitediv{
+    height: 700px;
+    width: 1500px;
+    background:white;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 2%;
+    padding-top: 6%;
+    padding-left: 2%;
+    padding-bottom: 8%;
+    border-radius: 10px;
+    display: flex;
+}
+
+#prevordertable{
+    margin-left: 60%;
+    margin-top: 100px;
+}
+h2{
+    margin-left: 45%;
+    margin-bottom: 50px;
+    height: 50px;
+    height: 30px;
+}

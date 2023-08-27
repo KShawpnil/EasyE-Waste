@@ -26,6 +26,7 @@ class HomeController extends Controller
      */
     public function index(){
         $result=DB::table('orders')->where('user_id',Auth::user()->id)->latest("updated_at")->get();
-        return view('dashboard')->with(compact('result'));
+        $name=Auth::user()->name;
+        return view('dashboard')->with(compact('result','name'));
     }
 }

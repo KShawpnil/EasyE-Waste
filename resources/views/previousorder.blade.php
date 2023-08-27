@@ -14,36 +14,9 @@
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="{{asset('css/style.css')}}" rel="stylesheet" />
+        <link href="{{asset('css/formpart2.css')}}" rel="stylesheet" />
+        <link href="{{asset('css/trackorder.css')}}" rel="stylesheet" />
 
-        <!-- login css link -->
-        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
-
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        
-        <link rel="stylesheet" href="{{asset('css/style2.css')}}">
-        <link rel="stylesheet" href="{{asset('css/dashboard.css')}}">
-        <link rel="stylesheet" href="{{asset('css/trackOrder.css')}}">
-        <link rel="stylesheet" href="{{asset('css/searchBar.css')}}">
-        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
-        <script src="https://js.pusher.com/8.2.0/pusher.min.js"></script>
-        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css"></script> -->
-        <script>
-
-            // Enable pusher logging - don't include this in production
-            Pusher.logToConsole = true;
-
-            var pusher = new Pusher('972d9a3395677ad6b78d', {
-            cluster: 'ap2'
-            });
-
-            var channel = pusher.subscribe('popup-channel');
-            channel.bind('status-update', function(data){
-                toastr.success(JSON.stringify(data.name)+' has been updated');
-                // alert(JSON.stringify(data));
-            });
-        </script>
-        <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
     </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -56,19 +29,10 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="{{url('/previousorder')}}">Previous Orders</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{{url('/trackorder')}}">Track My Order</a></li>
-                        <li class="nav-item">
-                        <form action="{{url('/')}}/notification" method="POST" class="nav-link">
-                            @csrf
-                            @foreach($result as $result)
-                            @if($loop->first)
-                            <input type="hidden" name="name" value="{{ $result->productname }}">
-                            @endif
-                            @endforeach
-                            <input type="image" width= "30px" src="{{asset('images/bell_icon_255865.ico')}}" alt="Submit Form" />
-                        </form>
-                        </li>
+                        <li class="nav-item"><a class="nav-link" href="/previousorder">Previous Orders</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/trackorder">Track My Order</a></li>
+                        
+                        
                         <li class="nav-item"><a class="nav-link" href="\home">{{ $name }}</a></li>
                     </ul>
                 </div>
@@ -79,29 +43,41 @@
             <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
                 <div class="d-flex justify-content-center">
                     <div class="text-center">
-                    <div class="dashboardItems">
-        <div class="gif">
-            
-        </div>
-        <div class="description">
-            <h2 id='appointmentHeader'>Book Appointment</h2>
-            <p  id="bookingParagraph">
-                Book your appointment with us for selling or recycling or e-waste. We assure you a great service. Thank you
-            </p>
-            <a class="btn btn-primary" href="{{url('/placeorder')}}">Book Appointment</a>
-        </div>
-    </div>
+                        <div id="whitediv">
+               
+                            <form action="">
+                                <table id="prevordertable">
+                                <tr>
+                                    <th>Product Name</th>
+                                    <th>Type</th>
+                                    <th>End Product</th>
+                                    <th>Order Date</th>
+                                    <th>Delivery Date</th>
+                                </tr>
+                                @foreach($result as $result)
+                                <tr>
+                                    <td>{{ $result->productname }}</td>
+                                    <td>{{ $result->producttype }}</td>
+                                    <td>{{ $result->endproduct }}</td>
+                                    <td>{{ $result->created_at }}</td>
+                                    <td>{{ $result->updated_at }}</td>
+                                </tr>
+                                @endforeach
+                                </table>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
         </header>
-        <!-- Signup-->
+        <!-- About-->
+        
+        <!-- Quality Function Deployment-->
+       
+        
+        <!-- Contact-->
         <section class="signup-section" id="signup">
-            <div class="container px-4 px-lg-5">
-                <div class="row gx-4 gx-lg-5">
-                  
-                </div>
-            </div>
+            
         </section>
         <!-- Contact-->
         <section class="contact-section bg-darkgreen">
@@ -156,11 +132,5 @@
         <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
-
-        <!-- login js -->
-        <script src="{{asset('js/jquery.min.js')}}"></script>
-        <script src="{{asset('js/popper.js')}}"></script>
-        <script src="{{asset('js/bootstrap.min.js')}}"></script>
-        <script src="{{asset('js/main.js')}}"></script>
     </body>
 </html>
